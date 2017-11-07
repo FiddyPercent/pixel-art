@@ -12,12 +12,6 @@ sform = $('#sizePicker');
 
 var grid = $('#grid');
 
-function makeGridPink() { 
- grid.css('background-color', 'pink');
-}
-function makeGridOrange() { 
- grid.css('background-color', 'orange');
-}
 
 /* function makeGrid(height, width) {
 
@@ -26,6 +20,9 @@ function makeGridOrange() {
 	}
 } */
 
-//sform.submit();
+
+$( ".button" ).on( "click", function() {
+  alert('button pressed');
+});
 
 
