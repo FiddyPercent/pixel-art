@@ -15,8 +15,12 @@ loads = 0;
 
 
  function makeGrid() {
-	var grid =  $('#grid').children();
-	grid.remove();
+	var grid =  $('#grid');
+	grid.children().remove();
+	
+	
+	
+	
 	for(var h = height.val() - 1 ; h >= 0; h-- ){
 		$('#grid').append("<div id=\"" + h + "\"class=\"height grid\"> "+ h +" </div>");
 		for(var w = width.val() - 2; w >= 0; w-- ){
