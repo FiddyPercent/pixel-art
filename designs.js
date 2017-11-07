@@ -2,27 +2,32 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
-var height, width, sButton, color, sform;
+var height, width, sButton, color, sform, loads;
 
 height = $('#input_height');
 width = $('#input_width');
 sButton = $(':submit');
 color = $('#colorPicker');
 sform = $('#sizePicker');
+loads = 0;
 
 var grid = $('#grid');
 
 
-/* function makeGrid(height, width) {
+ function makeGrid() {
+	
+	alert(height.val());
+	for(var h = height.val(); h >= 0; h-- ){
+		$('#grid').append("<div> hi </div>");
+		
+	} 
+	return false;
+ }
 
-	for(var h = height; h >= 0; h-- ){
-		alert("height = " + h);
-	}
-} */
 
-
-$( ".button" ).on( "click", function() {
-  alert('button pressed');
+$( document ).ready(function() {
+	loads++;
+    console.log( "loaded " + loads + " times" );
+	$('#grid').css('background-color', 'purple');
+	$( '.button' ).on( "click", makeGrid);
 });
-
-
