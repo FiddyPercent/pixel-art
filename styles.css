@@ -40,26 +40,31 @@ input[type=number] {
 }
 
 #grid {
-	width: 100%;
-	height: 100%;
+	width: 800px;
+	height: 800px;
 	border: 5px solid black;
+	margin: auto;
 }
 
 .height {
 	background-color: red;
-	width: 25px;
-	height: 25px;
-	border: 1px solid black;
 	float: left;
 
-	
+
 }
 
 .width {
 	background-color: blue;
+	float: left;
+
+
+}
+
+.grid {
 	width: 25px;
 	height: 25px;
 	border: 1px solid black;
-	float: left;
+	margin: autopx;
+	display:block;
 	
 }
