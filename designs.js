@@ -18,7 +18,7 @@ var grid = $('#grid');
 	
 	alert(height.val());
 	for(var h = height.val(); h >= 0; h-- ){
-		$('#grid').append("<div> hi </div>");
+		$('#grid').append("<div class=\"square\"> hi </div>");
 		
 	} 
 	return false;
