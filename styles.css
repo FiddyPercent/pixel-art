@@ -44,11 +44,13 @@ input[type=number] {
 	height: 800px;
 	border: 5px solid black;
 	margin: auto;
+	position: relative;
 }
 
 .height {
 	background-color: red;
 	float: left;
+	clear: left;
 
 
 }
@@ -56,7 +58,7 @@ input[type=number] {
 .width {
 	background-color: blue;
 	float: left;
-
+	
 
 }
 
@@ -64,7 +66,8 @@ input[type=number] {
 	width: 25px;
 	height: 25px;
 	border: 1px solid black;
-	margin: autopx;
+	margin: auto;
 	display:block;
+	position: relative;
 	
 }

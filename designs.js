@@ -18,10 +18,9 @@ loads = 0;
 	var grid =  $('#grid').children();
 	grid.remove();
 	for(var h = height.val() - 1 ; h >= 0; h-- ){
-		//alert("<div id=\"" + height.val() + "\"class=\"square\"> hi </div>");
 		$('#grid').append("<div id=\"" + h + "\"class=\"height grid\"> "+ h +" </div>");
 		for(var w = width.val() - 2; w >= 0; w-- ){
-			$('#' + h).append("<div id=\"" + h + "-" + w + "\" class=\"width grid\"> " + w + " </div>");
+			$('#grid').append("<div id=\"" + h + "-" + w + "\" class=\"width grid\"> " + w + " </div>");
 		}
 	} 
 	return false;
