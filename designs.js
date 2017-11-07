@@ -15,11 +15,13 @@ var grid = $('#grid');
 
 
  function makeGrid() {
-	
-	alert(height.val());
-	for(var h = height.val(); h >= 0; h-- ){
-		$('#grid').append("<div class=\"square\"> hi </div>");
-		
+	 
+	for(var h = height.val() - 1 ; h >= 0; h-- ){
+		//alert("<div id=\"" + height.val() + "\"class=\"square\"> hi </div>");
+		$('#grid').append("<div id=\"" + h + "\"class=\"height\"> "+ h +" </div>");
+		for(var w = width.val() - 1; w >= 0; w-- ){
+			$('#' + h).append("<div class=\"width\"> " + w + " </div>");
+		}
 	} 
 	return false;
  }
