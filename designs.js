@@ -15,18 +15,28 @@ loads = 0;
 
 
  function makeGrid() {
-	var grid =  $('#grid');
+	var cellSize, gridBorder, cellBorder, grid, tCellHeight, tCellWidth;
+	
+	grid =  $('#grid');
 	grid.children().remove();
-	
-	
-	
+	gridBorder = grid.css("border-left-width");
 	
 	for(var h = height.val() - 1 ; h >= 0; h-- ){
-		$('#grid').append("<div id=\"" + h + "\"class=\"height grid\"> "+ h +" </div>");
+		$('#grid').append("<div id=\"" + h + "\"class=\"height cell\"> "+ h +" </div>");
 		for(var w = width.val() - 2; w >= 0; w-- ){
-			$('#grid').append("<div id=\"" + h + "-" + w + "\" class=\"width grid\"> " + w + " </div>");
+			$('#grid').append("<div id=\"" + h + "-" + w + "\" class=\"width cell\"> " + w + " </div>");
 		}
 	} 
+	
+	cellSize = $('.cell').height();
+	cellBorder = $('.cell').css("border-left-width").replace("px","") * 2;
+	tCellHeight = ( cellSize + cellBorder )* height.val();
+	tCellWidth = ( cellSize + cellBorder )* width.val();;
+	console.log(cellSize + " = Total Cell Size " + cellBorder  );
+	
+	grid.css("height" , tCellHeight + "px");
+	grid.css("width" , tCellWidth + "px");
+	
 	return false;
  }
 
