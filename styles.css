@@ -1,5 +1,3 @@
-
-
 body {
     text-align: center;
 	margin-left: auto;
@@ -57,12 +55,12 @@ p {
 	position: relative;
 }
 
-.height {
+.heightCells {
 	float: left;
 	clear: left;
 }
 
-.width {
+.widthCells {
 	float: left;
 }
 

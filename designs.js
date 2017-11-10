@@ -18,14 +18,14 @@ color = $('#colorPicker');
 	gridBorder = grid.css("border-left-width");
 	
 	for(let h = height.val() - 1 ; h >= 0; h-- ){
-		$('#grid').append("<div id=\"" + h + "\"class=\"height cell\"> </div>");
+		$('#grid').append("<div id=\"" + h + "\"class=\"heightCells cell\"> </div>");
 			$("#" + h).click(function() {
 				$(this).css("background-color", color.val());
 			  return false;
 			});
 		
 		for(let w = width.val() - 2; w >= 0; w-- ){
-			$('#grid').append("<div id=\"" + h + "-" + w + "\" class=\"width cell\"> </div>");
+			$('#grid').append("<div id=\"" + h + "-" + w + "\" class=\"widthCells cell\"> </div>");
 			$("#" + h + "-" + w).click(function() {
 				$(this).css("background-color", color.val());
 			  return false;
@@ -38,7 +38,6 @@ color = $('#colorPicker');
 	cellBorder = $('.cell').css("border-left-width").replace("px","") * 2;
 	tCellHeight = ( cellSize + cellBorder )* height.val();
 	tCellWidth = ( cellSize + cellBorder )* width.val();;
-	console.log( cellSize + " = Total Cell Size " + cellBorder );
 	
 	grid.css( "min-height" , tCellHeight + "px" );
 	grid.css( "width" , tCellWidth + "px" );
