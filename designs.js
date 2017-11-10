@@ -53,7 +53,6 @@ loads = 0;
 $( document ).ready(function() {
 	loads++;
     console.log( "loaded " + loads + " times" );
-	$('#grid').css('background-color', 'purple');
 });
 
 $( '.button' ).on( "click", makeGrid);

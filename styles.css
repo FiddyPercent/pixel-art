@@ -51,19 +51,17 @@ p {
 #grid {
 	border: 5px solid black;
 	margin: 0 auto;
-	height: 0px;
-	width: 0px;
+	height: auto;
+	width: 15%;
 		
 }
 
 .height {
-	background-color: red;
 	float: left;
 	clear: left;
 }
 
 .width {
-	background-color: blue;
 	float: left;
 }
 
