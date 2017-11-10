@@ -9,7 +9,6 @@ width = $('#input_width');
 sButton = $(':submit');
 color = $('#colorPicker');
 sform = $('#sizePicker');
-loads = 0;
 
 
  function makeGrid() {
@@ -49,10 +48,5 @@ loads = 0;
 	return false;
  }
 
-
-$( document ).ready(function() {
-	loads++;
-    console.log( "loaded " + loads + " times" );
-});
 
 $( '.button' ).on( "click", makeGrid);
