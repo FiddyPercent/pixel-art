@@ -4,10 +4,12 @@
 
 * [Instructions](#instructions)
 * [Contributing](#contributing)
+* [Contributing](#contributing)
 
 ## Instructions
 
-To get started, open `designs.js` and start building out the app's functionality.
+Select a size for your grid and hit the submit button. You can then select
+a color and click on each grid cell to change the color. 
 
 For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
 

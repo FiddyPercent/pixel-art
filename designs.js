@@ -1,7 +1,4 @@
-// Select color input
-// Select size input
 
-// When size is submitted by the user, call makeGrid()
 var height, width, color;
 
 height = $('#input_height');
@@ -17,6 +14,7 @@ color = $('#colorPicker');
 	grid.children().remove();
 	gridBorder = grid.css("border-left-width");
 	
+	//Creates grid based off the grid values
 	for(let h = height.val() - 1 ; h >= 0; h-- ){
 		$('#grid').append("<div id=\"" + h + "\"class=\"heightCells cell\"> </div>");
 			$("#" + h).click(function() {
@@ -26,6 +24,7 @@ color = $('#colorPicker');
 		
 		for(let w = width.val() - 2; w >= 0; w-- ){
 			$('#grid').append("<div id=\"" + h + "-" + w + "\" class=\"widthCells cell\"> </div>");
+			//Creates a listener for each cell
 			$("#" + h + "-" + w).click(function() {
 				$(this).css("background-color", color.val());
 			  return false;
@@ -46,4 +45,4 @@ color = $('#colorPicker');
  }
 
 
-$( '.button' ).on( "click", makeGrid);
+$( '#button' ).on( "click", makeGrid);
